@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        GumballMachine1 gumballMachine1 = new GumballMachine1(10);
-        GumballMachine2 gumballMachine2 = new GumballMachine2(10);
-        GumballMachine3 gumballMachine3 = new GumballMachine3(10);
+        GumballMachine gumballMachine1 = new GumballMachine1(10);
+        GumballMachine gumballMachine2 = new GumballMachine2(10);
+        GumballMachine gumballMachine3 = new GumballMachine3(10);
         
         System.out.println(gumballMachine1);
         
