@@ -10,22 +10,23 @@ public class GumballMachine2
 
     private int num_gumballs;
     private boolean has_cent;
-    private int num_quarter;
+    private int balance;
     
     public  GumballMachine2( int size )
     {
         // initialise instance variables
         this.num_gumballs = size;
         this.has_cent = false;
-        this.num_quarter = 0;
+        this.balance = 0;
     }
 
 
     public void insertCoin(int coin)
     {
        if(coin == 25){
-           this.num_quarter++;
-           if(this.num_quarter == 2){
+           
+           this.balance += coin;
+           if(this.balance >= 50){
                this.has_cent = true;
            }
        } else{
@@ -38,6 +39,7 @@ public class GumballMachine2
         if ( this.has_cent ){
             if ( this.num_gumballs > 0 ){
                 this.num_gumballs-- ;
+                this.balance -= 50;
                 this.has_cent = false ;
                 System.out.println( "Thanks for your quarter.  Gumball Ejected!" ) ;
             }
@@ -45,12 +47,9 @@ public class GumballMachine2
                 System.out.println( "No More Gumballs!  Sorry, can't return your quarter." ) ;
             }
         }
-        else if(num_quarter ==0){
+        else if(this.balance == 0){
                 System.out.println("You turned, but there is no quarter");
                 
-            }else if(num_quarter == 1){
-                System.out.println("Insert one more quarter");
-    
             }else{
                 System.out.println( "Please insert a quarter" ) ;
             }    

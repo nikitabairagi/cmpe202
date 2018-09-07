@@ -7,6 +7,11 @@ public class Main {
         System.out.println(gumballMachine1);
         
         gumballMachine1.insertCoin(25);
+        gumballMachine1.insertCoin(25);
+        gumballMachine1.insertCoin(10);
+        gumballMachine1.insertCoin(25);
+        gumballMachine1.turnCrank();
+        gumballMachine1.turnCrank();
         gumballMachine1.turnCrank();
         
         System.out.println(gumballMachine2);
@@ -15,6 +20,7 @@ public class Main {
         gumballMachine2.insertCoin(10);
         gumballMachine2.turnCrank();
         gumballMachine2.insertCoin(25);
+        gumballMachine2.turnCrank();
         gumballMachine2.turnCrank();
         
         System.out.println(gumballMachine3);
