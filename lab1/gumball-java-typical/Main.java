@@ -9,7 +9,7 @@ public class Main {
         gumballMachine1.insertCoin(25);
         gumballMachine1.insertCoin(25);
         gumballMachine1.insertCoin(10);
-        gumballMachine1.insertCoin(25);
+        gumballMachine1.insertCoin(5);
         gumballMachine1.turnCrank();
         gumballMachine1.turnCrank();
         gumballMachine1.turnCrank();
@@ -30,8 +30,11 @@ public class Main {
         gumballMachine3.turnCrank();
         gumballMachine3.insertCoin(5);
         gumballMachine3.insertCoin(25);
-        gumballMachine3.insertCoin(10);
+        gumballMachine3.insertCoin(25);
         gumballMachine3.turnCrank();
+        gumballMachine3.turnCrank();
+        gumballMachine1.turnCrank();
+        
         
         
 

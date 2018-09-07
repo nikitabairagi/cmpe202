@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=GumballMachine
+comment1.params=num_gumballs\ gumball_cost\ denomination_accepted
+comment1.target=GumballMachine(int,\ int,\ java.lang.Integer[])
+comment2.params=coin
+comment2.target=boolean\ isValidInput(int)
+comment3.params=coin
+comment3.target=void\ insertCoin(int)
+comment4.params=
+comment4.target=void\ turnCrank()
+numComments=5
