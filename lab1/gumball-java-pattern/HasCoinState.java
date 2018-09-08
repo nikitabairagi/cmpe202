@@ -10,7 +10,8 @@ public class HasCoinState implements State {
     }
   
     public void insertCoin(int coin) {
-        System.out.println("You can't insert another Coin");
+            System.out.println("You can't insert another Coin");
+       
     }
  
     public void ejectCoin() {
@@ -20,16 +21,18 @@ public class HasCoinState implements State {
     }
  
     public void turnCrank() {
-        
+        if(gumballMachine.getMachineBalance() >= gumballMachine.getGumballCost()){
             System.out.println("You turned...");
             gumballMachine.setState(gumballMachine.getSoldState());
+        }
     }
 
     public void dispense() {
         System.out.println("No gumball dispensed.Insert coin");
+        gumballMachine.setState(gumballMachine.getNoCoinState());
     }
  
-	public String toString() {
-		return "waiting for turn of crank";
-	}
+    public String toString() {
+        return "waiting for turn of crank";
+    }
 }

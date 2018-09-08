@@ -9,7 +9,7 @@ public class GumballMachine {
  
     State state = soldOutState;
     int count = 0;
-    int machine_balance = 0;
+    int machine_balance =0;
     int gumball_cost;
     List<Integer> denomination_accepted;
  
@@ -25,6 +25,7 @@ public class GumballMachine {
         } 
         
         this.gumball_cost = gumball_cost;
+        this.machine_balance = 0;
         this.denomination_accepted = Arrays.asList(denomination_accepted);
     }
     
@@ -35,10 +36,7 @@ public class GumballMachine {
     public void insertCoin(int coin) {
         
         if(isValidCoin(coin)){
-            machine_balance += coin;
             state.insertCoin(coin);
-        }else if(this.state == hasCoinState){
-            System.out.println("You can't insert another coin");
         }else{
             System.out.println("Please insert a valid coin");
         }
@@ -62,8 +60,8 @@ public class GumballMachine {
         if (count != 0) {
             count = count - 1;
         }
-        if(machine_balance >= gumball_cost){
-             machine_balance -= gumball_cost;
+        if(this.machine_balance >= this.gumball_cost){
+             this.machine_balance = this.machine_balance - this.gumball_cost;
         }
     }
  
@@ -71,13 +69,13 @@ public class GumballMachine {
         return count;
     }
     int getMachineBalance(){
-        return machine_balance;
+        return this.machine_balance;
     }
     void setMachineBalance(int new_balance){
-        machine_balance = new_balance;
+        this.machine_balance = new_balance;
     }
     int getGumballCost(){
-        return gumball_cost;
+        return this.gumball_cost;
     }
   
     void refill(int count) {

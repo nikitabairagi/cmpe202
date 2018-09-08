@@ -7,13 +7,11 @@ public class NoCoinState implements State {
         this.gumballMachine = gumballMachine;
     }
     
-    public void insertCoin(int coin) {
-        System.out.println("You inserted a" + coin);
+    public void insertCoin(int coin) { 
+        System.out.println("You inserted a " + coin);
+        gumballMachine.setState(gumballMachine.getHasCoinState());
+        gumballMachine.setMachineBalance(gumballMachine.getMachineBalance() + coin);
         
-        if(gumballMachine.getMachineBalance() >= gumballMachine.getGumballCost()){
-            
-            gumballMachine.setState(gumballMachine.getHasCoinState());
-        }
     }
  
     public void ejectCoin() {
@@ -21,10 +19,10 @@ public class NoCoinState implements State {
     }
  
     public void turnCrank() {
-        if(gumballMachine.getMachineBalance() !=0 ){
-            System.out.println("Gumball Cost is 50.");
+       if(gumballMachine.getMachineBalance()==0){
+           System.out.println("You turned, but there's no Coin");
         }else{
-            System.out.println("You turned, but there's no Coin");
+           System.out.println("No gumball dispensed.Insert coin");
         }
      }
  
