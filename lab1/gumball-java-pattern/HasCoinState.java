@@ -29,6 +29,8 @@ public class HasCoinState implements State {
 
     public void dispense() {
         System.out.println("No gumball dispensed.Insert coin");
+        
+        //allow inserting more coins for 2nd and machine...
         gumballMachine.setState(gumballMachine.getNoCoinState());
     }
  

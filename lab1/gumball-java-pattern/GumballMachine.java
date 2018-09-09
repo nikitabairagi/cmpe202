@@ -60,9 +60,9 @@ public class GumballMachine {
         if (count != 0) {
             count = count - 1;
         }
-        if(this.machine_balance >= this.gumball_cost){
+       // if(this.machine_balance >= this.gumball_cost){
              this.machine_balance = this.machine_balance - this.gumball_cost;
-        }
+        //}
     }
  
     int getCount() {
