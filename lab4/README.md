@@ -1,15 +1,17 @@
-Design Pattern Used :
+<b>Design Pattern Used :</b>
 
 Chain of Responsibility , Singleton
 
-Classes Participating:
+<b>Classes Participating:</b>
 
-TableManager
-Table
-CutomerManager
-Cutomer
+<ul>
+  <li>TableManager</li>
+  <li>Table</li>
+  <li>CutomerManager</li>
+  <li>Cutomer</li>
+</ul>
 
-Description:
+<b>Description:</b>
 
 TableManager is a singleton class which maintains all the tables in a list. Also whenever a table is released it updates the table. TableManager will be instantiated from main class and same instance will to returned to CustomerManager class.
 
