@@ -39,12 +39,16 @@ public class App {
     }
 
     public void key(String ch) {
-        if(ch.matches("[0-9]+") && ch.length() == 1){
+        if(ch.equals("Delete") || ch.equalsIgnoreCase("X")){
+            screen.key(ch, count);
+            count --;
+//            if(count == 4 || count == 8 || count == 12){
+//                count --;
+//            }
+        }else if(ch.matches("[0-9]+") && ch.length() == 1 && count <= 22){
             count++;
             screen.key(ch, count);
 
-        }else if(ch.equals("Delete") || ch.equals("X")){
-            screen.key(ch, count);
         }
 
 

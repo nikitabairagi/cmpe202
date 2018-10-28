@@ -15,7 +15,7 @@ public class SlashDecorator implements IDisplayComponent, IKeyEventHandler {
     }
 
     public void key(String ch , int cnt){
-        if(cnt == 18){
+        if(cnt == 18 && !ch.equals("Delete") && !ch.equalsIgnoreCase("X")){
             ch =  ch +"/";
             exp.key(ch,cnt);
 

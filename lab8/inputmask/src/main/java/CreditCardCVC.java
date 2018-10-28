@@ -18,8 +18,11 @@ public class CreditCardCVC implements IDisplayComponent, IKeyEventHandler {
 
 	public void key(String ch, int cnt) {
 		if ( cnt >= 21 ) {
-
-			if ( cnt >= 21 && cnt <= 23 )
+			if(ch.equals("Delete") || ch.equalsIgnoreCase("X")){
+				backspace();
+				//cnt --;
+			}
+			else if ( cnt >= 21 && cnt <= 23 )
 				cvc += ch ;
 
 			else if ( nextHandler != null )

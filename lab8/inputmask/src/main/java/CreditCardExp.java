@@ -20,9 +20,10 @@ public class CreditCardExp implements IDisplayComponent, IKeyEventHandler
 	public void key(String ch, int cnt) {
 		if ( cnt >= 17 && cnt <= 20  )
 
-			//if(ch.equals("X") || ch.equals("Delete"))
-				//backspace();
-			//else
+			if(ch.equalsIgnoreCase("X") || ch.equals("Delete")){
+				backspace(cnt);
+			}
+			else
 				date += ch ;
 
 		else if ( nextHandler != null )
@@ -33,10 +34,13 @@ public class CreditCardExp implements IDisplayComponent, IKeyEventHandler
 		return ; // do nothing
 	}
 
-	public void backspace(){
-		if (date != null && date.length() > 0) {
-			date = date.substring(0, date.length() - 1);
-		}
+	public void backspace(int cnt){
+		if (date != null && date.length() > 0 && cnt == 19) {
+			date = date.substring(0, date.length() - 2);
+
+		}else if(date != null && date.length() > 0 ){
+		    date = date.substring(0, date.length() -1);
+        }
 	}
 
 }

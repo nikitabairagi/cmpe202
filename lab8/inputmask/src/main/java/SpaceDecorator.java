@@ -15,7 +15,7 @@ public class SpaceDecorator implements IDisplayComponent,IKeyEventHandler {
     }
 
     public void key(String ch , int cnt){
-       if(cnt == 4 || cnt == 8 || cnt == 12){
+       if((cnt == 4 || cnt == 8 || cnt == 12) && !ch.equals("Delete") && !ch.equalsIgnoreCase("X")){
            ch = ch + " ";
            num.key(ch, cnt);
        }else{
