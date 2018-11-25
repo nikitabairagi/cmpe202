@@ -6,9 +6,9 @@ In Lab1 we had three different classes for different GumballMachines. To select 
 ## Screenshots
 ![Feature Model](FeatureModel.png)
 
-![CrankModel 1 Qauter](OneQuaterCrankModel.png)
+![CrankModel 1 Qauter](OneQuaterCarnkModel.png)
 
-![CrankModel 2 Qauters](TwoQuaterCarnkModel.png)
+![CrankModel 2 Qauters](TwoQuarterCrankModel.png)
 
 ![SlotModel Cost 25 Cents](Cost25SlotModel.png)
 ![SlotModel Cost 25 Cents Output](Cost25SlotModel1.png)
