@@ -14,4 +14,4 @@ In Lab1 we had three different classes for different GumballMachines. To select 
 ![SlotModel Cost 25 Cents Output](Cost25SlotModel1.png)
 
 ![SlotModel Cost 50 Cents](Cost50SlotModel.png)
-![SlotModel Cost 50 Cents Output](Cost50SlotModel1.png)
+![SlotModel Cost 50 Cents Output](Cost50SlotMode1.png)
